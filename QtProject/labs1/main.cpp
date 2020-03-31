@@ -9,6 +9,8 @@
 
 int main()
 {
+    // call a function here (define in problem1.cc)
+    example_function();
     std::cout << "Good luck students" << std::endl;
     return 0;
 }
