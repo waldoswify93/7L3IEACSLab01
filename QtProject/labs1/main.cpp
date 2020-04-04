@@ -10,10 +10,17 @@
 
 int main()
 {
-    std::string mystring = "Here my string";
-    std::cout << mystring << std::endl;
-    // call a function here (define in problem1.cc)
-    example_function();
-    std::cout << "Good luck students" << std::endl;
+    //---------------------------------
+    //  Problem 1
+    //---------------------------------
+    int a = 0;
+    int b = 0;
+    std::cout << "Give first value" << std::endl;
+    std::cin >> a;
+    std::cout << "Give second value" << std::endl;
+    std::cin >> b;
+    std::cout << "Value for a before swaping\t" << a << "Value for b before swaping\t" << b << std::endl;
+    problem1::swap(a, b);
+    std::cout << "Value for a after swaping\t" << a << "Value for b after swaping\t" << b << std::endl;
     return 0;
 }
