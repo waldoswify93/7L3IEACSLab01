@@ -24,17 +24,18 @@ int main()
 //    std::cout << "Value for a after swaping\t" << a << "\tValue for b after swaping\t" << b << std::endl;
     // test same signe function
     // all négatif
-    a = -1;
-    b = -1;
-    std::cout << "a : \t" << a << "\tb : \t" << b << "\t result : \t" << problem1::same_sign(a, b) << std::endl;
-    a = 1;
-    b = -1;
-    std::cout << "a : \t" << a << "\tb : \t" << b << "\t result : \t" << problem1::same_sign(a, b) << std::endl;
-    a = -1;
-    b = 1;
-    std::cout << "a : \t" << a << "\tb : \t" << b << "\t result : \t" << problem1::same_sign(a, b) << std::endl;
-    a = 1;
-    b = 1;
-    std::cout << "a : \t" << a << "\tb : \t" << b << "\t result : \t" << problem1::same_sign(a, b) << std::endl;
+//    a = -1;
+//    b = -1;
+//    std::cout << "a : \t" << a << "\tb : \t" << b << "\t result : \t" << problem1::same_sign(a, b) << std::endl;
+//    a = 1;
+//    b = -1;
+//    std::cout << "a : \t" << a << "\tb : \t" << b << "\t result : \t" << problem1::same_sign(a, b) << std::endl;
+//    a = -1;
+//    b = 1;
+//    std::cout << "a : \t" << a << "\tb : \t" << b << "\t result : \t" << problem1::same_sign(a, b) << std::endl;
+//    a = 1;
+//    b = 1;
+//    std::cout << "a : \t" << a << "\tb : \t" << b << "\t result : \t" << problem1::same_sign(a, b) << std::endl;
+    problem1::display_first();
     return 0;
 }
