@@ -36,6 +36,9 @@ int main()
 //    a = 1;
 //    b = 1;
 //    std::cout << "a : \t" << a << "\tb : \t" << b << "\t result : \t" << problem1::same_sign(a, b) << std::endl;
-    problem1::display_first();
+//    problem1::display_first();
+    std::cout << "Type 0 or 1" << std::endl;
+    std::cin >> a;
+    problem1::display_first_second(a);
     return 0;
 }
