@@ -41,17 +41,32 @@ int main()
 //    std::cin >> a;
 //    problem1::display_first_second(a);
 
+//    //---------------------------------
+//    //  Problem 2
+//    //---------------------------------
+//    int start = 1;
+//    int end = 10;
+//    double * res_func = new double[end-start+1];
+//    problem2::sin_ln(start, end, res_func);
+
+//    for (int i = start; i <= end; i++)
+//        std::cout << "Index\t" << i << "\tValue function\t" << res_func[i] << std::endl;
+
+//    free(res_func);
+
     //---------------------------------
     //  Problem 2
     //---------------------------------
-    int start = 1;
-    int end = 10;
-    double * res_func = new double[end-start+1];
-    problem2::sin_ln(start, end, res_func);
 
-    for (int i = start; i <= end; i++)
-        std::cout << "Index\t" << i << "\tValue function\t" << res_func[i] << std::endl;
+    int a = 14;
+    int b = 100;
+    std::cout << "Value for a before swaping\t" << a << "\tValue for b before swaping\t" << b << std::endl;
+    problem3::swap(&a, &b);
+    std::cout << "Value for a after swaping (pointer version) \t" << a << "\tValue for b after swaping\t" << b << std::endl;
 
-    free(res_func);
+    std::cout << "Value for a before swaping\t" << a << "\tValue for b before swaping\t" << b << std::endl;
+    problem3::swap(a, b);
+    std::cout << "Value for a after swaping (reference version) \t" << a << "\tValue for b after swaping\t" << b << std::endl;
+
     return 0;
 }
