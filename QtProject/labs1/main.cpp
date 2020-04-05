@@ -13,8 +13,8 @@ int main()
     //---------------------------------
     //  Problem 1
     //---------------------------------
-    int a = 0;
-    int b = 0;
+//    int a = 0;
+//    int b = 0;
 //    std::cout << "Give first value" << std::endl;
 //    std::cin >> a;
 //    std::cout << "Give second value" << std::endl;
@@ -37,8 +37,21 @@ int main()
 //    b = 1;
 //    std::cout << "a : \t" << a << "\tb : \t" << b << "\t result : \t" << problem1::same_sign(a, b) << std::endl;
 //    problem1::display_first();
-    std::cout << "Type 0 or 1" << std::endl;
-    std::cin >> a;
-    problem1::display_first_second(a);
+//    std::cout << "Type 0 or 1" << std::endl;
+//    std::cin >> a;
+//    problem1::display_first_second(a);
+
+    //---------------------------------
+    //  Problem 2
+    //---------------------------------
+    int start = 1;
+    int end = 10;
+    double * res_func = new double[end-start+1];
+    problem2::sin_ln(start, end, res_func);
+
+    for (int i = start; i <= end; i++)
+        std::cout << "Index\t" << i << "\tValue function\t" << res_func[i] << std::endl;
+
+    free(res_func);
     return 0;
 }
