@@ -54,19 +54,35 @@ int main()
 
 //    free(res_func);
 
+//    //---------------------------------
+//    //  Problem 3
+//    //---------------------------------
+
+//    int a = 14;
+//    int b = 100;
+//    std::cout << "Value for a before swaping\t" << a << "\tValue for b before swaping\t" << b << std::endl;
+//    problem3::swap(&a, &b);
+//    std::cout << "Value for a after swaping (pointer version) \t" << a << "\tValue for b after swaping\t" << b << std::endl;
+
+//    std::cout << "Value for a before swaping\t" << a << "\tValue for b before swaping\t" << b << std::endl;
+//    problem3::swap(a, b);
+//    std::cout << "Value for a after swaping (reference version) \t" << a << "\tValue for b after swaping\t" << b << std::endl;
+
     //---------------------------------
-    //  Problem 2
+    //  Problem 4
     //---------------------------------
 
-    int a = 14;
-    int b = 100;
-    std::cout << "Value for a before swaping\t" << a << "\tValue for b before swaping\t" << b << std::endl;
-    problem3::swap(&a, &b);
-    std::cout << "Value for a after swaping (pointer version) \t" << a << "\tValue for b after swaping\t" << b << std::endl;
+    int * data = new int[problem4::data_bublesort_siz];
 
-    std::cout << "Value for a before swaping\t" << a << "\tValue for b before swaping\t" << b << std::endl;
-    problem3::swap(a, b);
-    std::cout << "Value for a after swaping (reference version) \t" << a << "\tValue for b after swaping\t" << b << std::endl;
+    for(int i = 0; i < problem4::data_bublesort_siz; i++)
+        data[i] = problem4::data_bublecksort[i];
 
+    problem4::bubbleSort(data, problem4::data_bublesort_siz);
+
+    for(int i = 0; i < problem4::data_bublesort_siz; i++) {
+        std::cout << data[i];
+    }
+
+    free(data);
     return 0;
 }
