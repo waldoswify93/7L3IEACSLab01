@@ -12,6 +12,6 @@ void bubbleSort(int * data, const int & siz){
                 swapped = true;
             }
         }
-    }while(!swapped);
+    }while(swapped);
 }
 }
