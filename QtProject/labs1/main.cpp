@@ -137,6 +137,8 @@ int main()
     double ** A;
     double ** B;
 
+    double * flat_A_B;
+
     A = problem5::matrix_alloc(3, 2);
     B = problem5::matrix_alloc(2, 3);
 
@@ -152,8 +154,14 @@ int main()
     std::cout << "Display B" << std::endl;
     problem5::matrix_display(B, 2, 3);
 
+    std::cout << std::endl;
+    std::cout << "Transforme matrix A to flat array : " << std::endl;
+    flat_A_B = problem5::matrix_2_array(A, 3, 2);
+    problem5::display_flat_matrix(flat_A_B, 3, 2);
+
     problem5::matrix_delete(A, 3);
     problem5::matrix_delete(B, 2);
+    free(flat_A_B);
 
 
 

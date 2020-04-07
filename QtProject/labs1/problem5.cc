@@ -44,4 +44,20 @@ void matrix_fill_rand(double ** matrix, const int & rows, const int & cols) {
     }
 }
 
+double * matrix_2_array(double ** matrix, const int & rows, const int & cols) {
+    double * array = new double[rows * cols];
+    for (int i = 0; i < rows; i++)
+        for(int j = 0; j < cols; j++)
+            array [i * rows + j] = matrix [i][j];
+
+    return array;
+}
+
+void display_flat_matrix(double * array, const int & rows, const int & cols) {
+    for (int i = 0; i < rows; i++)
+        for(int j = 0; j < cols; j++)
+            std::cout << array [i * rows + j] << "\t";
+
+    std::cout << std::endl;
+}
 }
