@@ -136,8 +136,12 @@ int main()
 
     double ** A;
     double ** B;
+    double ** C;
 
     double * flat_A_B;
+
+    int n = 5;
+    int m = 0;
 
     A = problem5::matrix_alloc(3, 2);
     B = problem5::matrix_alloc(2, 3);
@@ -158,6 +162,13 @@ int main()
     std::cout << "Transforme matrix A to flat array : " << std::endl;
     flat_A_B = problem5::matrix_2_array(A, 3, 2);
     problem5::display_flat_matrix(flat_A_B, 3, 2);
+
+
+
+    C = problem5::pascal_matrix(n, m);
+    std::cout << std::endl;
+    std::cout << "Display Pascal matrix for order n = " << n << std::endl;
+    problem5::matrix_display(C, m, m);
 
     problem5::matrix_delete(A, 3);
     problem5::matrix_delete(B, 2);

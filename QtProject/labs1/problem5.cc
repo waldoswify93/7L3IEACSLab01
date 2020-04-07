@@ -14,6 +14,7 @@ double** matrix_alloc(const int & rows, const int & cols) {
 
     return matrix;
 }
+
 void matrix_delete(double ** matrix, const int & rows) {
     for (int i = 0; i < rows; ++i)
         delete [] matrix[i];
@@ -59,5 +60,25 @@ void display_flat_matrix(double * array, const int & rows, const int & cols) {
             std::cout << array [i * rows + j] << "\t";
 
     std::cout << std::endl;
+}
+
+int min(const int & a, const int & b) {
+    if (a > b) return b;
+    else return a;
+}
+
+double ** pascal_matrix(const int & n, int & m) {
+    m = 2 * n + 1;
+    double ** C = matrix_alloc((m), (m));
+
+    for (int i = 0; i <= 2 * n; i++) {
+        for (int j = 0; j <= min(i, 2 * n); j++) {
+            if (j == 0 || j == i)
+                C[i][j] = 1;
+            else
+                C[i][j] = C[i - 1][j - 1] + C[i - 1][j];
+        }
+    }
+    return C;
 }
 }
