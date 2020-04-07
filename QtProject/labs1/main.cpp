@@ -74,20 +74,15 @@ int main()
     //---------------------------------
 
     int data_bublecksort [] = {64, 34, 25, 12, 22, 11, 90};
+
+    int data_bublequick [] = {65, 54, 26, 91, 21, 12, 13};
     int data_bublesort_siz = 7;
 
     int * val = new int[data_bublesort_siz];
-
-
-
-
-
-
-
-
+    int * val_quick = new int[data_bublesort_siz];
 
     std::cout << std::endl;
-    std::cout << "Avant tri" << std::endl;
+    std::cout << "Avant tri bubblesort : " << std::endl;
     std::cout << std::endl;
     for(int i = 0; i < data_bublesort_siz; i++) {
         val[i] = data_bublecksort[i];
@@ -98,17 +93,41 @@ int main()
     problem4::bubbleSort(val, data_bublesort_siz);
     auto t2 = std::chrono::high_resolution_clock::now();
 
-    auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
+    auto durationbubble = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
 
     std::cout << std::endl;
-    std::cout << "Après tri" << std::endl;
+    std::cout << "Après tri bubble sort : " << std::endl;
     std::cout << std::endl;
     for(int i = 0; i < data_bublesort_siz; i++) {
         std::cout << val[i] << std::endl;
     }
 
-    std::cout << std::endl << "Duration : " << duration << std::endl;
+    std::cout << std::endl;
+    std::cout << "Avant tri quicksort : " << std::endl;
+    std::cout << std::endl;
+    for(int i = 0; i < data_bublesort_siz; i++) {
+        val_quick[i] = data_bublequick[i];
+        std::cout << val_quick[i] << std::endl;
+    }
+
+    t1 = std::chrono::high_resolution_clock::now();
+    problem4::quickSort(val_quick, 0, data_bublesort_siz-1);
+    t2 = std::chrono::high_resolution_clock::now();
+
+    auto durationquick = std::chrono::duration_cast<std::chrono::nanoseconds>( t2 - t1 ).count();
+
+    std::cout << std::endl;
+    std::cout << "Après tri quicksort : " << std::endl;
+    std::cout << std::endl;
+    for(int i = 0; i < data_bublesort_siz; i++) {
+        std::cout << val_quick[i] << std::endl;
+    }
+
+    std::cout << std::endl << "Duration bubblesort : " << durationbubble << std::endl;
+    std::cout << std::endl << "Duration bubblesort : " << durationquick << std::endl;
+
 
     free(val);
+    free(val_quick);
     return 0;
 }
