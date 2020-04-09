@@ -3,7 +3,7 @@
 
 
 namespace problem2 {
-void sin_ln(int, int, double *);
+void sin_ln(const int &, const int &, double *);
 }
 
 #endif // PROBLEM2_H

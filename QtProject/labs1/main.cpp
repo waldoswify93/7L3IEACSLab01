@@ -23,8 +23,6 @@ int main()
 //    std::cout << "Value for a before swaping\t" << a << "\tValue for b before swaping\t" << b << std::endl;
 //    problem1::swap(a, b);
 //    std::cout << "Value for a after swaping\t" << a << "\tValue for b after swaping\t" << b << std::endl;
-    // test same signe function
-    // all négatif
 //    a = -1;
 //    b = -1;
 //    std::cout << "a : \t" << a << "\tb : \t" << b << "\t result : \t" << problem1::same_sign(a, b) << std::endl;
@@ -55,9 +53,9 @@ int main()
 
 //    free(res_func);
 
-//    //---------------------------------
-//    //  Problem 3
-//    //---------------------------------
+    //---------------------------------
+    //  Problem 3
+    //---------------------------------
 
 //    int a = 14;
 //    int b = 100;
